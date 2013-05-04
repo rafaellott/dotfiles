@@ -10,9 +10,9 @@ export GOPATH=~/go
 
 # some exports and alias are differente from my Desktop
 # and my mac
-if [ uname != *Linux* ]; then
+if [[ $(uname) == 'Linux' ]]; then
 	alias ls='ls -hF --color=auto'
-elif [ uname != *Darwin* ]; then
+elif [[ $(uname) == 'Darwin' ]]; then
 	export CLICOLOR=1
 	alias ls='ls -hF'
 fi
