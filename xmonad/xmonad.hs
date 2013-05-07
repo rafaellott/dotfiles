@@ -6,8 +6,21 @@ import XMonad.Util.EZConfig(additionalKeys)
 import System.IO
 
 
+myTerminal :: String
 myTerminal = "/usr/bin/urxvt"
+
+myModMask :: KeyMask
 myModMask = mod4Mask
+
+myNormalBorderColor :: String
+myNormalBorderColor = "#586e75"
+
+myFocusedBorderColor :: String
+myFocusedBorderColor = "#dc322f"
+
+myBorderWidth :: Dimension
+myBorderWidth = 3
+
 
 
 main = do
@@ -17,6 +30,9 @@ main = do
 		, layoutHook = avoidStruts $ layoutHook defaultConfig
 		, modMask = myModMask	-- Rebind Mod to Windows Key
 		, terminal = myTerminal
+		, normalBorderColor = myNormalBorderColor
+		, focusedBorderColor = myFocusedBorderColor
+		, borderWidth = myBorderWidth
 		, logHook = dynamicLogWithPP xmobarPP
 						{ ppOutput = hPutStrLn xmproc
 						, ppTitle = xmobarColor "green" "" . shorten 50
