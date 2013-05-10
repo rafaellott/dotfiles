@@ -6,7 +6,7 @@
 [[ $- != *i* ]] && return
 
 # export the GOPATH
-export GOPATH="~/go"
+export GOPATH="$HOME/go"
 
 # make vim default editor
 export EDITOR="vim"
