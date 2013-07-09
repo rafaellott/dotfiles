@@ -20,5 +20,8 @@ elif [[ $(uname) == 'Darwin' ]]; then
 	alias ls='ls -hF'
 fi
 
+GITB="\`git branch 2>/dev/null | grep \"^\*\" | sed -E \"s/\*\ (.*)/\(\1\)/\"\`"
+PS1="[\u@\h \W $GITB]$ "
+
 # PS1
-PS1='[\u@\h \W]\$ '
+export PS1
