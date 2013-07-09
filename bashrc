@@ -21,7 +21,7 @@ elif [[ $(uname) == 'Darwin' ]]; then
 fi
 
 GITB="\`git branch 2>/dev/null | grep \"^\*\" | sed -E \"s/\*\ (.*)/\(\1\)/\"\`"
-PS1="[\u@\h \W $GITB]$ "
+PS1="[\u@\h \W \[\033[31m\]$GITB\[\033[37m\]\[\033[00m\]]$ "
 
 # PS1
 export PS1
