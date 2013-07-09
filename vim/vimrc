@@ -16,6 +16,10 @@ Bundle 'gmarik/vundle'
 Bundle 'twerth/ir_black'
 Bundle 'altercation/vim-colors-solarized'
 
+" PowerLine
+Bundle 'Lokaltog/vim-powerline'
+set laststatus=2
+
 filetype plugin on 
 filetype indent on
 
