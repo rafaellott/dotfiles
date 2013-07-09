@@ -1,0 +1,92 @@
+set nocompatible
+filetype off
+
+" ==========================================================
+" Vundle- Allows us to organize our vim plugins
+" ==========================================================
+" Load pathogen with docs for all plugins
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle
+" required! 
+Bundle 'gmarik/vundle'
+
+Bundle 'twerth/ir_black'
+Bundle 'mattn/zencoding-vim'
+Bundle 'altercation/vim-colors-solarized'
+
+filetype plugin on 
+filetype indent on
+
+" ==========================================================
+" Basic Settings
+" ==========================================================
+syntax on
+filetype on
+set number
+
+" displays tabs and end of lines
+set listchars=tab:▸\ ,eol:¬,trail:-,precedes:<,extends:>
+"set listchars=tab:▸\ ,eol:$
+"set list
+
+""" Reading/Wrinting
+set ffs=unix,dos,mac
+
+""" Moving Around/Editing
+set cursorline
+"set cursorcolumn
+set tabstop=4		" <tab> inserts 4 spaces
+set shiftwidth=4
+set noexpandtab		" Use tabs, not spaces, for autoindent/tab key.
+set shiftround		" rounds indent to a multiple of shiftwidth
+
+""" Searching and Patterns
+"set ignorecase			 " Default to using case insensitive searches,
+"set smartcase			 " unless uppercase letters are used in the regex.
+"set smarttab			 " Handle tabs more intelligently 
+set hlsearch			" Highlight searches by default.
+set incsearch			" Incrementally search while typing a /regex
+
+" Moving to windows with Ctrl
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+
+if has("autocmd")
+	" Source the vimrc file after saving it
+	"autocmd bufwritepost .vimrc source $MYVIMRC
+
+	" Syntax of those languages is fussy over tabs Vs Spaces
+	autocmd FileType make setlocal tabstop=8 softtabstop=8 shiftwidth=8
+	autocmd FileType yaml setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab
+
+	"autocmd FileType javascript setlocal tabstop=4 softtabstop=4 shiftwidth=4 noexpandtab
+	autocmd FileType c,cpp,java,javascript,php setlocal tabstop=4 softtabstop=4 shiftwidth=4
+
+	autocmd FileType html,xhtml,xml,css setlocal shiftwidth=4 tabstop=4 softtabstop=4
+	" Python
+	"au BufRead *.py compiler nose
+	autocmd FileType python set omnifunc=pythoncomplete#Complete
+	autocmd FileType python setlocal expandtab shiftwidth=4 tabstop=8 softtabstop=4 smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class,with
+	autocmd BufRead *.py set errorformat=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m
+	" Don't let pyflakes use the quickfix window
+	"let g:pyflakes_use_quickfix = 0
+
+	autocmd BufNewFile,BufRead *.rss,*.atom setfiletype xml
+endif
+
+if has("unix")
+	let s:uname = system("uname")
+	if s:uname == "Darwin\n"
+		" Do Mac stuff here
+		colorscheme ir_black
+	else
+		set background=dark
+		colorscheme solarized
+	endif
+endif
+
