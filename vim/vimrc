@@ -16,6 +16,9 @@ Bundle 'gmarik/vundle'
 Bundle 'twerth/ir_black'
 Bundle 'altercation/vim-colors-solarized'
 
+" FuGITive 
+Bundle 'tpope/vim-fugitive'
+
 " PowerLine
 Bundle 'Lokaltog/vim-powerline'
 set laststatus=2
