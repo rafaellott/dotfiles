@@ -17,6 +17,8 @@ if [[ $(uname) == 'Linux' ]]; then
 	alias ls='ls -hF --color=auto'
 elif [[ $(uname) == 'Darwin' ]]; then
 	export CLICOLOR=1
+	export PYTHONPATH="/usr/local/lib/python2.7/site-packages:$PYTHONPATH" #needed to work opencv
+
 	alias ls='ls -hF'
 fi
 
