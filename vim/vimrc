@@ -39,6 +39,9 @@ Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
 Bundle "garbas/vim-snipmate"
 
+" CtrlP
+Bundle 'kien/ctrlp.vim'
+
 filetype plugin on 
 filetype indent on
 
