@@ -39,6 +39,10 @@ Bundle "honza/vim-snippets"
 " CtrlP
 Bundle "kien/ctrlp.vim"
 
+" Airline
+Bundle "bling/vim-airline"
+set laststatus=2
+
 filetype plugin on 
 filetype indent on
 
