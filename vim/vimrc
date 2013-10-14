@@ -11,24 +11,24 @@ call vundle#rc()
 
 " let Vundle manage Vundle
 " required! 
-Bundle 'gmarik/vundle'
+Bundle "gmarik/vundle"
 
 " ColorSchemes
-Bundle 'twerth/ir_black'
-Bundle 'altercation/vim-colors-solarized'
+Bundle "twerth/ir_black"
+Bundle "altercation/vim-colors-solarized"
 
 " zen coding (for HTML)
-Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
+Bundle "rstacruz/sparkup", {"rtp": "vim/"}
 
 " FuGITive 
-Bundle 'tpope/vim-fugitive'
+Bundle "tpope/vim-fugitive"
 
 " NERDTree
-Bundle 'scrooloose/nerdtree'
+Bundle "scrooloose/nerdtree"
 nmap <silent> <Leader>n :NERDTreeToggle<CR>
 
 " Syntastic
-Bundle 'scrooloose/syntastic'
+Bundle "scrooloose/syntastic"
 
 " Snipmate
 Bundle "MarcWeber/vim-addon-mw-utils"
@@ -37,7 +37,7 @@ Bundle "garbas/vim-snipmate"
 Bundle "honza/vim-snippets"
 
 " CtrlP
-Bundle 'kien/ctrlp.vim'
+Bundle "kien/ctrlp.vim"
 
 filetype plugin on 
 filetype indent on
