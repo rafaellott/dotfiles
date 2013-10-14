@@ -23,10 +23,6 @@ Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 " FuGITive 
 Bundle 'tpope/vim-fugitive'
 
-" PowerLine
-Bundle 'Lokaltog/vim-powerline'
-set laststatus=2
-
 " NERDTree
 Bundle 'scrooloose/nerdtree'
 nmap <silent> <Leader>n :NERDTreeToggle<CR>
