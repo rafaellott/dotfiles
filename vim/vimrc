@@ -13,10 +13,6 @@ call vundle#rc()
 " required! 
 Bundle "gmarik/vundle"
 
-" ColorSchemes
-Bundle "twerth/ir_black"
-Bundle "altercation/vim-colors-solarized"
-
 " zen coding (for HTML)
 Bundle "rstacruz/sparkup", {"rtp": "vim/"}
 
