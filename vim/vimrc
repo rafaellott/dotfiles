@@ -39,6 +39,9 @@ Bundle "kien/ctrlp.vim"
 Bundle "bling/vim-airline"
 set laststatus=2
 
+" Colorschemes
+Bundle "flazz/vim-colorschemes"
+
 filetype plugin on 
 filetype indent on
 
