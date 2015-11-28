@@ -1,0 +1,17 @@
+atom-beautify/
+atom-bootstrap3/
+atom-dark-ui-slim/
+autoclose-html/
+dracula-theme/
+emmet/
+jquery-snippets/
+jshint/
+jslint/
+linter/
+linter-jshint/
+linter-pep8/
+livereload/
+merge-conflicts/
+minimap/
+rest-client/
+selection-highlight/

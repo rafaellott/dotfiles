@@ -6,7 +6,8 @@ filetype off
 " ==========================================================
 " Load pathogen with docs for all plugins
 
-set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/dotfiles/vim/bundle/Vundle.vim/
+set t_Co=256
 call vundle#rc()
 
 " let Vundle manage Vundle
@@ -114,9 +115,8 @@ if has("unix")
 	let s:uname = system("uname")
 	if s:uname == "Darwin\n"
 		" Do Mac stuff here
-		set background=dark
 		colorscheme 256-grayvim
-		colorscheme ir_black
+		set background=dark
 	else
 		set background=dark
 		colorscheme solarized
